@@ -2,12 +2,14 @@ def add_user(users, name, email):
     if search_user_by_email(users, email) == None:
         id = len(users) + 1
         user = {
-            "id" : int(id),
+            "id_user" : int(id),
             "name" : name,
             "email" : email
         }
         users.append(user)
-        return
+        print("Ingreso usuario exitoso")
+        return 
+    print("El correo ya esta en uso")
     return None
 
 
@@ -22,6 +24,6 @@ def list_users(users):
 
 def search_user_by_id(users, id):
     for u in users:
-        if u["id"] == id:
+        if u["id_user"] == id:
             return (u)
     return None
