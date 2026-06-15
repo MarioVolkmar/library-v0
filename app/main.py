@@ -1,6 +1,6 @@
 ## from data import books, users, loans
-from books import add_book, list_books, search_book_by_title
-from users import add_user, list_users, search_user_by_email
+from books import add_book, list_books
+from users import add_user, list_users
 from loans import borrow_book, return_book, list_loans
 from storage import load_library_data, save_library_data
 

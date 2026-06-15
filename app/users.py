@@ -1,8 +1,16 @@
 def add_user(users, name, email):
-    if search_user_by_email(users, email) == None:
-        id = len(users) + 1
+    busq = search_user_by_email(users, email)
+    if len(users) == 0:
+            id_user = 1
+    else:
+        id_user = users[0]["id_user"]
+        for b in users:
+            if b["id_user"] >= id_user:
+                id_user = b["id_user"] + 1
+                
+    if busq is None:
         user = {
-            "id_user" : int(id),
+            "id_user" : id_user,
             "name" : name,
             "email" : email
         }
@@ -15,7 +23,7 @@ def add_user(users, name, email):
 
 def search_user_by_email(users, email):
     for u in users:
-        if u["email"] == email.strip():
+        if u["email"].lower() == email.strip().lower():
             return u
     return None
 
