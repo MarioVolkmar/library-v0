@@ -1,7 +1,16 @@
-from data import books, users, loans
+## from data import books, users, loans
 from books import add_book, list_books, search_book_by_title
 from users import add_user, list_users, search_user_by_email
 from loans import borrow_book, return_book, list_loans
+from storage import load_library_data, save_library_data
+
+
+
+books, users, loans = load_library_data()
+
+print(books)
+print(users)
+print(loans)
 
 add_book(books, "Clean Code", "Robert C. Martin")
 add_book(books, "Python Crash Course", "Eric Matthes")
@@ -23,3 +32,5 @@ print(list_books(books))
 return_book(books, loans, 2)
 print(list_loans(loans))
 print(list_books(books))
+
+save_library_data(books, users, loans)

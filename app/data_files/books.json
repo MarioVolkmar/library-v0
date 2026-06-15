@@ -1,0 +1,21 @@
+
+[
+    {
+        "id_book": 1,
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "available": false
+    },
+    {
+        "id_book": 2,
+        "title": "Python Crash Course",
+        "author": "Eric Matthes",
+        "available": true
+    },
+    {
+        "id_book": 3,
+        "title": "Python Crash Course",
+        "author": "Mario Volkmar",
+        "available": true
+    }
+]
